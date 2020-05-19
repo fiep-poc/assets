@@ -31,10 +31,10 @@
 										"exec": [
 											"pm.test(\"response must be 200 and has a body\", function () {",
 											"     // assert that the status code is 200",
-											"     pm.response.to.have.status(200); ",
+											"     pm.response.to.have.status(200);",
 											"     // assert that the response has a valid JSON body",
 											"     pm.response.to.be.withBody;",
-											"     pm.response.to.have.jsonBody(\"applicationId\"); ",
+											"     pm.response.to.have.jsonBody(\"applicationId\");",
 											"});",
 											"",
 											"// extract body",
@@ -77,73 +77,7 @@
 									]
 								}
 							},
-							"response": [
-								{
-									"name": "Create Application",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"name": "Content-Type",
-												"value": "application/json",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"additional-reference-info\": {\n        \"subject\": \"Anmeldung eines Gewerbes in Musterstadt\",\n        \"case-id\": \"DF/8923\"\n    },\n    \"content-structure\": {\n        \"data\": {\n            \"schema\": {\n                \"mime-type\": \"json\",\n                \"schema-source\": \"none\"\n            },\n            \"mime-type\": \"json\"\n        },\n        \"docs\": [\n            {\n                \"doc-id\": \"1\",\n                \"purpose\": \"form\",\n                \"size\": 39273,\n                \"mime\": \"application/pdf\",\n                \"filename\": \"antrag.pdf\",\n                \"description\": \"Das Antragsformular\",\n                \"lang\": {\n                    \"lang\": \"de\",\n                    \"region\": \"DE\"\n                },\n                \"hash\": {\n                    \"algorithm\": \"SHA-256\",\n                    \"digest\": \"03ba204e50d126e4674c005e04d82e84c21366780af1f43bd54a37816b6ab340\"\n                }\n            }\n        ]\n    },\n    \"public-service-type\": {\n        \"name\": \"Gewerbeanmeldung\",\n        \"description\": \"Eine Gewerbeanmeldung ist immer dann notwendig, wenn Sie einen stehenden Gewerbebetrieb beginnen.\",\n        \"leika-id\": \"99050012104000\",\n        \"other-identifiers\": [\n            {\n                \"id\": \"8664844\",\n                \"schemeURI\": \"service.niedersachsen.de\",\n                \"schemeName\": \"Serviceportal Niedersachsen\"\n            },\n            {\n                \"id\": \"354824\",\n                \"schemeURI\": \"buerger.thueringen.de\",\n                \"schemeName\": \"Zuständigkeitsfinder Thüringen\"\n            }\n        ]\n    },\n    \"applicants\": [\n        {\n            \"authentification-info\": {\n                \"assurance-level\": \"high\",\n                \"authentification-method\": \"eID\",\n                \"timestamp\": \"2020-03-03T12:38:23Z\"\n            },\n            \"identity-info\": {\n                \"date-of-birth\": \"1970-09-13\",\n                \"gender\": \"m\",\n                \"given-name\": \"WERNER\",\n                \"family-name\": \"MUSTERMANN\",\n                \"place-of-residence\": {\n                    \"street\": \"KURZER WEG 7\",\n                    \"postal-code\": \"12345\",\n                    \"city\": \"ANKH-MORPORK\"\n                }\n            },\n            \"contact-info\": {\n                \"electronic-adresses\": [\n                    {\n                        \"channel-type\": \"Service-Account-Mailbox\",\n                        \"address\": \"3b0c9c8c-0801-45f0-a331-2abfc9db78d0\"\n                    }\n                ],\n                \"physical-adress\": {\n                    \"street\": \"Kurzer Weg\",\n                    \"house-number\": \"7\",\n                    \"postal-code\": \"12345\",\n                    \"city\": \"Ankh-Morpork\"\n                },\n                \"telephone\": [\n                    {\n                        \"number\": \"+49 89 32168-42\",\n                        \"mobile\": true,\n                        \"type\": \"work\"\n                    }\n                ]\n            }\n        }\n    ],\n    \"payment-info\": {\n        \"reference\": \"TP/93/GDP\",\n        \"usage\": \"Gewerbeanmeldung\",\n        \"amount\": 17.3,\n        \"timestamp\": \"2020-03-03T12:38:23Z\",\n        \"status\": \"success\",\n        \"transaction\": \"1f77c5f9b759db9cdce59988b24974d465c7be5e462a6185485559ff6e2dea82\"\n    }\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}{{port}}/sender/{{source_id}}/{{destination_id}}",
-											"host": [
-												"{{url}}{{port}}"
-											],
-											"path": [
-												"sender",
-												"{{source_id}}",
-												"{{destination_id}}"
-											]
-										}
-									},
-									"status": "200",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Date",
-											"value": "Tue, 31 Mar 2020 06:05:59 GMT"
-										},
-										{
-											"key": "Server",
-											"value": "Apache/2.4.38 (Debian)"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=5, max=100"
-										},
-										{
-											"key": "Connection",
-											"value": "Keep-Alive"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"application-id\": \"45bb5b95-d853-4fc5-b45d-10aa9e15287a\"\n}"
-								}
-							]
+							"response": []
 						},
 						{
 							"name": "Add Applicaiton Data",
@@ -483,66 +417,7 @@
 									]
 								}
 							},
-							"response": [
-								{
-									"name": "Create destination",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"public-organization\": {\n        \"organization-name\": \"Gewerbeamt Musterstadt\",\n        \"address\": {\n            \"street\": \"Kurzer Weg\",\n            \"houseNr\": \"7\",\n            \"postalCode\": \"12345\",\n            \"city\": \"Ankh-Morpork\"\n        },\n        \"contact\": {\n            \"telephone\": {\n                \"number\": \"+49 89 32168-0\",\n                \"mobile\": false,\n                \"type\": \"work\"\n            },\n            \"email\": \"behoerde@example.com\"\n        }\n    },\n    \"technical-contact\": {\n        \"formOfAddress\": \"Herr\",\n        \"academicTitle\": \"Dr.\",\n        \"firstName\": \"Kunibert\",\n        \"lastName\": \"Vonundzu\",\n        \"contact\": {\n            \"telephone\": [\n                {\n                    \"number\": \"+49 89 32168-42\",\n                    \"mobile\": false,\n                    \"type\": \"work\"\n                },\n                {\n                    \"number\": \"+49 123 456789\",\n                    \"mobile\": true,\n                    \"type\": \"work\"\n                }\n            ],\n            \"email\": \"kunibert.vonundzu@example.com\"\n        }\n    },\n    \"schemas\": [\n        {\n            \"mime-type\": \"json\",\n            \"schema-source\": \"none\"\n        }\n    ],\n    \"callback\": {\n        \"callback-url\": \"https://www.example.com/callback\"\n    }\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}{{port}}/subscriber/{{subscriber_id}}/destinations",
-											"host": [
-												"{{url}}{{port}}"
-											],
-											"path": [
-												"subscriber",
-												"{{subscriber_id}}",
-												"destinations"
-											]
-										}
-									},
-									"status": "200",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Date",
-											"value": "Tue, 31 Mar 2020 05:36:26 GMT"
-										},
-										{
-											"key": "Server",
-											"value": "Apache/2.4.38 (Debian)"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=5, max=100"
-										},
-										{
-											"key": "Connection",
-											"value": "Keep-Alive"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"destination-id\": \"e15fc92e-c286-424b-9802-39c6b6bc441d\"\n}"
-								}
-							]
+							"response": []
 						},
 						{
 							"name": "Get Destination",
@@ -612,66 +487,7 @@
 									]
 								}
 							},
-							"response": [
-								{
-									"name": "Create destination",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"public-organization\": {\n        \"organization-name\": \"Gewerbeamt Musterstadt\",\n        \"address\": {\n            \"street\": \"Kurzer Weg\",\n            \"houseNr\": \"7\",\n            \"postalCode\": \"12345\",\n            \"city\": \"Ankh-Morpork\"\n        },\n        \"contact\": {\n            \"telephone\": {\n                \"number\": \"+49 89 32168-0\",\n                \"mobile\": false,\n                \"type\": \"work\"\n            },\n            \"email\": \"behoerde@example.com\"\n        }\n    },\n    \"technical-contact\": {\n        \"formOfAddress\": \"Herr\",\n        \"academicTitle\": \"Dr.\",\n        \"firstName\": \"Kunibert\",\n        \"lastName\": \"Vonundzu\",\n        \"contact\": {\n            \"telephone\": [\n                {\n                    \"number\": \"+49 89 32168-42\",\n                    \"mobile\": false,\n                    \"type\": \"work\"\n                },\n                {\n                    \"number\": \"+49 123 456789\",\n                    \"mobile\": true,\n                    \"type\": \"work\"\n                }\n            ],\n            \"email\": \"kunibert.vonundzu@example.com\"\n        }\n    },\n    \"schemas\": [\n        {\n            \"mime-type\": \"json\",\n            \"schema-source\": \"none\"\n        }\n    ],\n    \"callback\": {\n        \"callback-url\": \"https://www.example.com/callback\"\n    }\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{url}}{{port}}/subscriber/{{subscriber_id}}/destinations",
-											"host": [
-												"{{url}}{{port}}"
-											],
-											"path": [
-												"subscriber",
-												"{{subscriber_id}}",
-												"destinations"
-											]
-										}
-									},
-									"status": "200",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Date",
-											"value": "Tue, 31 Mar 2020 05:36:26 GMT"
-										},
-										{
-											"key": "Server",
-											"value": "Apache/2.4.38 (Debian)"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=5, max=100"
-										},
-										{
-											"key": "Connection",
-											"value": "Keep-Alive"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"destination-id\": \"e15fc92e-c286-424b-9802-39c6b6bc441d\"\n}"
-								}
-							]
+							"response": []
 						},
 						{
 							"name": "Delete Destination",
@@ -1001,33 +817,9 @@
 	],
 	"variable": [
 		{
-			"id": "7dfe8fc9-f48b-4870-b0b4-be3cbdc3b9b3",
-			"key": "source_id",
-			"value": "source-id",
-			"type": "string"
-		},
-		{
-			"id": "1b03a48b-2fdb-4486-96f7-b3412045f66b",
-			"key": "destination_id",
-			"value": "destination-id",
-			"type": "string"
-		},
-		{
-			"id": "e38b35c6-3987-4a0e-bf0d-7de77adbfc3d",
-			"key": "application_id",
-			"value": "",
-			"type": "string"
-		},
-		{
-			"id": "bbb69286-d3c8-4443-87f6-a3d87ca1968d",
+			"id": "59b68b48-44c4-429f-afc6-6cf45926554f",
 			"key": "doc_id",
 			"value": "1",
-			"type": "string"
-		},
-		{
-			"id": "4fb679a6-33f4-4437-813b-cc5b7d88571d",
-			"key": "subscriber_id",
-			"value": "subscriber-id",
 			"type": "string"
 		}
 	],
